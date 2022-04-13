@@ -1,25 +1,35 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "icons": [
-    {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
-  ],
-  "start_url": ".",
+  "short_name": "Jens",
+  "name": "Jens Penneman",
+  "description": "Ik ben Jens Penneman, student-zelfstandige aan HoGent en WEB4YOU",
+  "start_url": "https://jenspenneman.com",
+  "scope": "/",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#1876d1",
+  "background_color": "#ffffff",
+  "lang": "vls",
+  "dir": "ltr",
+  "categories": [
+	"personalization"
+  ],
+  "icons": [
+	{
+	  "src": "favicon.ico",
+	  "sizes": "256x256 128x128 64x64 48x48 40x40 32x32 24x24 20x20 16x16",
+	  "type": "image/x-icon",
+	  "purpose": "any"
+	},
+	{
+	  "src": "jenspenneman.webp",
+	  "type": "image/webp",
+	  "sizes": "1000x1000",
+	  "purpose": "any"
+	},
+	{
+	  "src": "jenspenneman.png",
+	  "type": "image/png",
+	  "sizes": "2000x2000",
+	  "purpose": "any maskable"
+	}
+  ]
 }
