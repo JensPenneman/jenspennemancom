@@ -146,6 +146,7 @@ function App() {
         }}>
           <CardMedia component={"img"}
                      src={JensPenneman}
+                     alt={"Portret van Jens"}
                      sx={{
                        aspectRatio: smartphone ? "1/2" : "1/1",
                        maxWidth:    smartphone ? "100%" : "30%",
