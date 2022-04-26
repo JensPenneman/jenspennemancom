@@ -66,7 +66,7 @@ function App() {
   ), [lightMode]);
 
 
-  const smartphone = useMediaQuery("only screen and (max-width:425px)");
+  const smartphone = useMediaQuery("only screen and (max-width:630px)");
 
   const [isOpenedNavDrawer, setOpenedNavDrawer] = useState(false);
   const toggleNavDrawer                         = useCallback(() => {
@@ -103,11 +103,26 @@ function App() {
             <Collapse orientation={"horizontal"} in={!smartphone}>
               <Box component={"div"} sx={{display: "flex"}}>
                 {workInProgress &&
-                 <Button sx={{color: "white"}} startIcon={workInProgress?.icon} onClick={toggleWIPDialog}>
+                 <Button sx={{color: "inherit"}} startIcon={workInProgress?.icon} onClick={toggleWIPDialog}>
                    <Typography variant={"button"} noWrap>
                      {workInProgress?.short}
                    </Typography>
                  </Button>}
+                <Button sx={{color: "inherit"}} href={"#studies"}>
+                  <Typography variant={"button"} noWrap>
+                    Studies
+                  </Typography>
+                </Button>
+                <Button sx={{color: "inherit"}} href={"#werkervaring"}>
+                  <Typography variant={"button"} noWrap>
+                    Werkervaring
+                  </Typography>
+                </Button>
+                <Button sx={{color: "inherit"}} href={"#vaardigheden"}>
+                  <Typography variant={"button"} noWrap>
+                    Vaardigheden
+                  </Typography>
+                </Button>
               </Box>
             </Collapse>
           </Toolbar>
@@ -137,6 +152,22 @@ function App() {
           }}>
             <ListItemIcon>{workInProgress?.icon}</ListItemIcon>
             {workInProgress?.title}
+          </ListItemButton>
+          {/*TODO HREF doesn't work on drawer that sets the overflow to hidden*/}
+          <ListItemButton href={"#studies"} onClick={() => {
+            setOpenedNavDrawer(false);
+          }}>
+            Studies
+          </ListItemButton>
+          <ListItemButton href={"#werkervaring"} onClick={() => {
+            setOpenedNavDrawer(false);
+          }}>
+            Werkervaring
+          </ListItemButton>
+          <ListItemButton href={"#vaardigheden"} onClick={() => {
+            setOpenedNavDrawer(false);
+          }}>
+            Vaardigheden
           </ListItemButton>
         </List>
       </Drawer>

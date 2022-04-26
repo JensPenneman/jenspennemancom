@@ -3,7 +3,7 @@ import {Divider, Typography} from "@mui/material";
 
 const page = memo(() => {
 	return (<Fragment>
-		<Divider>
+		<Divider id={"werkervaring"}>
 			<Typography variant={"h4"} component={"h2"}>
 				Werkervaring
 			</Typography>
