@@ -18,14 +18,15 @@ import {
   List,
   ListItemButton,
   ListItemIcon,
+  Stack,
   ThemeProvider,
   Toolbar,
   Typography,
   useMediaQuery,
 } from "@mui/material";
 import {Close, Menu} from "@mui/icons-material";
-import {firstname, lastname, workInProgress} from "./config";
-import {AboutMe} from "./containers";
+import {firstname, lastname, siteSettings, workInProgress} from "./config";
+import {AboutMe, Skills, Studies, Work} from "./containers";
 
 
 function App() {
@@ -147,7 +148,12 @@ function App() {
           <CardHeader title={workInProgress?.title}
                       subheader={workInProgress?.text} />
         </Card>
-        <AboutMe />
+        <Stack spacing={siteSettings?.sectionSpacing} direction={"column"}>
+          <AboutMe />
+          <Studies />
+          <Work />
+          <Skills />
+        </Stack>
       </Container>
       <Dialog open={workInProgress && isOpenedWIPDialog} onClose={toggleWIPDialog}>
         <DialogTitle>{workInProgress?.title}</DialogTitle>

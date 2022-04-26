@@ -76,4 +76,8 @@ const workInProgress = {
 	icon:  <Handyman />,
 };
 
-export {firstname, lastname, portret, leadText, studies, work, projects, socialMedia, workInProgress};
+const siteSettings = {
+	sectionSpacing: 2,
+};
+
+export {firstname, lastname, portret, leadText, studies, work, projects, socialMedia, workInProgress, siteSettings};
