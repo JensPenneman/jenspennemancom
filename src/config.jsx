@@ -3,7 +3,7 @@ import JensPenneman from "./images/IMG_1429.jpeg";
 import HoGentLogo from "./images/HoGentLogo.png";
 import BroederschoolStekeneLogo from "./images/BroederschoolStekeneLogo.png";
 
-import {Facebook, Instagram, LinkedIn, Twitter} from "@mui/icons-material";
+import {Facebook, Handyman, Instagram, LinkedIn, Twitter} from "@mui/icons-material";
 
 const firstname = "Jens";
 const lastname  = "Penneman";
@@ -68,4 +68,11 @@ const socialMedia = [{
 	href: "https://facebook.com",
 }];
 
-export {firstname, lastname, portret, studies, work, projects, socialMedia};
+const workInProgress = {
+	title: "Work in progress",
+	short: "WIP",
+	text:  "Er wordt nog aan de site gewerkt... Kom eens terug binnen een week of 2.",
+	icon:  <Handyman />,
+};
+
+export {firstname, lastname, portret, studies, work, projects, socialMedia, workInProgress};

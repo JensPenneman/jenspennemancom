@@ -24,8 +24,8 @@ import {
   Typography,
   useMediaQuery,
 } from "@mui/material";
-import {Close, Handyman, Menu} from "@mui/icons-material";
-import JensPenneman from "./images/IMG_1429.jpeg";
+import {Close, Menu} from "@mui/icons-material";
+import {firstname, lastname, portret, workInProgress} from "./config";
 
 
 function App() {
@@ -89,7 +89,7 @@ function App() {
                 component="div"
                 sx={{flexGrow: 1}}
             >
-              Jens Penneman
+              {firstname} {lastname}
             </Typography>
             <Collapse orientation={"horizontal"} in={smartphone}>
               <IconButton
@@ -101,11 +101,12 @@ function App() {
             </Collapse>
             <Collapse orientation={"horizontal"} in={!smartphone}>
               <Box component={"div"} sx={{display: "flex"}}>
-                <Button sx={{color: "white"}} startIcon={<Handyman />} onClick={toggleWIPDialog}>
-                  <Typography variant={"button"} noWrap>
-                    WIP
-                  </Typography>
-                </Button>
+                {workInProgress &&
+                 <Button sx={{color: "white"}} startIcon={workInProgress?.icon} onClick={toggleWIPDialog}>
+                   <Typography variant={"button"} noWrap>
+                     {workInProgress?.short}
+                   </Typography>
+                 </Button>}
               </Box>
             </Collapse>
           </Toolbar>
@@ -119,7 +120,7 @@ function App() {
               component="div"
               sx={{flexGrow: 1}}
           >
-            Jens Penneman
+            {firstname} {lastname}
           </Typography>
           <IconButton
               edge={"end"}
@@ -129,12 +130,12 @@ function App() {
           </IconButton>
         </Toolbar>
         <List>
-          <ListItemButton onClick={() => {
+          <ListItemButton divider onClick={() => {
             setOpenedNavDrawer(false);
             toggleWIPDialog();
           }}>
-            <ListItemIcon><Handyman /></ListItemIcon>
-            Work in progress
+            <ListItemIcon>{workInProgress?.icon}</ListItemIcon>
+            {workInProgress?.title}
           </ListItemButton>
         </List>
       </Drawer>
@@ -143,26 +144,26 @@ function App() {
           marginY: 2,
           display: smartphone ? undefined : "flex",
         }}>
-          <CardMedia component={"img"}
-                     src={JensPenneman}
-                     alt={"Portret van Jens"}
-                     sx={{
-                       aspectRatio: smartphone ? "1/2" : "1/1",
-                       maxWidth:    smartphone ? "100%" : "30%",
-                     }} />
-          <CardHeader title={"Jens Penneman 👋🏻"} subheader={"Er wordt nog aan de site gewerkt... Kom eens terug" +
-                                                              " binnen een week of 2."} />
+          {portret &&
+           <CardMedia component={"img"}
+                      src={portret}
+                      alt={"Portret van " + firstname}
+                      sx={{
+                        aspectRatio: smartphone ? "1/2" : "1/1",
+                        maxWidth:    smartphone ? "100%" : "30%",
+                      }} />}
+          <CardHeader title={firstname + " " + lastname + " 👋🏻"}
+                      subheader={workInProgress?.text} />
         </Card>
       </Container>
-      <Dialog open={isOpenedWIPDialog} onClose={toggleWIPDialog}>
-        <DialogTitle>Work in progress</DialogTitle>
+      <Dialog open={workInProgress && isOpenedWIPDialog} onClose={toggleWIPDialog}>
+        <DialogTitle>{workInProgress?.title}</DialogTitle>
         <DialogContent>
           <DialogContentText>
-            Er wordt nog aan de site gewerkt... Kom eens terug binnen een week of 2.
+            {workInProgress?.text}
           </DialogContentText>
         </DialogContent>
       </Dialog>
-
     </ThemeProvider>
   </Fragment>);
 }
