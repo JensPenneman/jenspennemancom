@@ -8,17 +8,17 @@
     "url": "https://jenspenneman.com"
   },
   "contributors": [
-    {
-      "name": "Jens Penneman",
-      "email": "me@jenspenneman.com",
-      "url": "https://jenspenneman.com"
-    }
+	{
+	  "name": "Jens Penneman",
+	  "email": "me@jenspenneman.com",
+	  "url": "https://jenspenneman.com"
+	}
   ],
   "keywords": [
-    "Jens",
-    "Penneman"
+	"Jens",
+	"Penneman"
   ],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
 	"@emotion/react": "^11.9.0",

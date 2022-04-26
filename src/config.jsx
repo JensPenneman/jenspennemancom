@@ -7,8 +7,9 @@ import {Facebook, Handyman, Instagram, LinkedIn, Twitter} from "@mui/icons-mater
 
 const firstname = "Jens";
 const lastname  = "Penneman";
-
-const portret = JensPenneman;
+const portret   = JensPenneman;
+const leadText  = "Ik ben Jens, een student aan HoGent, gedreven door de nieuwste snufjes en technologieën." +
+				  "Ik heb ook een enorme passie voor React en website-gerelateerde talen en frameworks.";
 
 const studies = [
 	{
@@ -75,4 +76,4 @@ const workInProgress = {
 	icon:  <Handyman />,
 };
 
-export {firstname, lastname, portret, studies, work, projects, socialMedia, workInProgress};
+export {firstname, lastname, portret, leadText, studies, work, projects, socialMedia, workInProgress};

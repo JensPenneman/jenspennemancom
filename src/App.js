@@ -5,7 +5,6 @@ import {
   Button,
   Card,
   CardHeader,
-  CardMedia,
   Collapse,
   Container,
   createTheme,
@@ -25,7 +24,8 @@ import {
   useMediaQuery,
 } from "@mui/material";
 import {Close, Menu} from "@mui/icons-material";
-import {firstname, lastname, portret, workInProgress} from "./config";
+import {firstname, lastname, workInProgress} from "./config";
+import {AboutMe} from "./containers";
 
 
 function App() {
@@ -139,22 +139,15 @@ function App() {
           </ListItemButton>
         </List>
       </Drawer>
-      <Container component={"main"}>
+      <Container component={"main"} sx={{marginY: 2}}>
         <Card sx={{
           marginY: 2,
           display: smartphone ? undefined : "flex",
         }}>
-          {portret &&
-           <CardMedia component={"img"}
-                      src={portret}
-                      alt={"Portret van " + firstname}
-                      sx={{
-                        aspectRatio: smartphone ? "1/2" : "1/1",
-                        maxWidth:    smartphone ? "100%" : "30%",
-                      }} />}
-          <CardHeader title={firstname + " " + lastname + " 👋🏻"}
+          <CardHeader title={workInProgress?.title}
                       subheader={workInProgress?.text} />
         </Card>
+        <AboutMe />
       </Container>
       <Dialog open={workInProgress && isOpenedWIPDialog} onClose={toggleWIPDialog}>
         <DialogTitle>{workInProgress?.title}</DialogTitle>
