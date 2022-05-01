@@ -20,6 +20,12 @@ const studies = [
 		schoolName: "HoGent",
 		schoolHref: "https://www.hogent.be/",
 		schoolLogo: HoGentLogo,
+		size:       {
+			xs: 1,
+			sm: 1,
+			md: 2,
+			lg: 3,
+		},
 	},
 	{
 		startdate:  new Date("2018-09-01"),
@@ -29,6 +35,12 @@ const studies = [
 		schoolName: "GTI Beveren",
 		schoolHref: "https://www.beveren.be/nl/scholen/gti-beveren",
 		schoolLogo: undefined,
+		size:       {
+			xs: 1,
+			sm: 1,
+			md: 1,
+			lg: 2,
+		},
 	},
 	{
 		startdate:  new Date("2016-09-01"),
@@ -38,6 +50,12 @@ const studies = [
 		schoolName: "Broederschool Stekene",
 		schoolHref: "https://stekene.broeders.be/",
 		schoolLogo: BroederschoolStekeneLogo,
+		size:       {
+			xs: 1,
+			sm: 1,
+			md: 1,
+			lg: 1,
+		},
 	},
 ];
 
