@@ -179,7 +179,7 @@ function App() {
           <CardHeader title={workInProgress?.title}
                       subheader={workInProgress?.text} />
         </Card>
-        <Stack spacing={siteSettings?.sectionSpacing} direction={"column"}>
+        <Stack rowGap={siteSettings?.sectionSpacing} direction={"column"}>
           <AboutMe />
           <Studies />
           <Work />
