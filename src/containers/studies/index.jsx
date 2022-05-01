@@ -41,7 +41,10 @@ const page = memo(() => {
 							studie.schoolName && studie.schoolHref &&
 							<CardActions>
 								<Button href={studie.schoolHref}
-										endIcon={<OpenInNew />}>Naar {studie.schoolName}</Button>
+										target={"_blank"}
+										endIcon={<OpenInNew />}>
+									Naar {studie.schoolName}
+								</Button>
 							</CardActions>
 						}
 					</Card>
