@@ -2,7 +2,7 @@ import {Fragment, useCallback, useMemo, useState} from "react";
 import {AppBar, Box, Button, Card, CardHeader, Collapse, Container, createTheme, CssBaseline, Dialog, DialogContent, DialogContentText, DialogTitle, Drawer, IconButton, List, ListItemButton, ListItemIcon, Stack, ThemeProvider, Toolbar, Typography, useMediaQuery} from "@mui/material";
 import {Close, Menu} from "@mui/icons-material";
 import {firstname, lastname, siteSettings, workInProgress} from "./config";
-import {AboutMe, Skills, Studies, Work} from "./containers";
+import {AboutMe, Studies, Work} from "./containers";
 
 
 function App() {
@@ -95,11 +95,13 @@ function App() {
                     Werkervaring
                   </Typography>
                 </Button>
-                <Button sx={{color: "inherit"}} href={"#vaardigheden"}>
-                  <Typography variant={"button"} noWrap>
-                    Vaardigheden
-                  </Typography>
-                </Button>
+                {/*
+                 <Button sx={{color: "inherit"}} href={"#vaardigheden"}>
+                 <Typography variant={"button"} noWrap>
+                 Vaardigheden
+                 </Typography>
+                 </Button>
+                 */}
               </Box>
             </Collapse>
           </Toolbar>
@@ -141,11 +143,13 @@ function App() {
           }}>
             Werkervaring
           </ListItemButton>
-          <ListItemButton href={"#vaardigheden"} onClick={() => {
-            setOpenedNavDrawer(false);
-          }}>
-            Vaardigheden
-          </ListItemButton>
+          {/*
+           <ListItemButton href={"#vaardigheden"} onClick={() => {
+           setOpenedNavDrawer(false);
+           }}>
+           Vaardigheden
+           </ListItemButton>
+           */}
         </List>
       </Drawer>
       <Container component={"main"} sx={{marginY: 2}}>
@@ -160,7 +164,7 @@ function App() {
           <AboutMe/>
           <Studies/>
           <Work/>
-          <Skills/>
+          {/*<Skills/>*/}
         </Stack>
       </Container>
       <Dialog open={workInProgress && isOpenedWIPDialog} onClose={toggleWIPDialog}>
