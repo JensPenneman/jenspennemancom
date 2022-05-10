@@ -2,14 +2,16 @@ import JensPenneman from "./images/IMG_1429.jpeg";
 
 import HoGentLogo from "./images/HoGentLogo.png";
 import BroederschoolStekeneLogo from "./images/BroederschoolStekeneLogo.png";
+import WEB4YOULogo from "./images/WEB4YOULogo.svg";
+import HoutshopLogo from "./images/HoutshopLogo.png";
 
 import {Facebook, Handyman, Instagram, LinkedIn, Twitter} from "@mui/icons-material";
 
 const firstname = "Jens";
-const lastname  = "Penneman";
-const portret   = JensPenneman;
-const leadText  = "Ik ben Jens, een student aan HoGent, gedreven door de nieuwste snufjes en technologieën." +
-				  "Ik heb ook een enorme passie voor React en website-gerelateerde talen en frameworks.";
+const lastname = "Penneman";
+const portret = JensPenneman;
+const leadText = "Ik ben Jens, een student aan HoGent, gedreven door de nieuwste snufjes en technologieën." +
+	"Ik heb ook een enorme passie voor React en website-gerelateerde talen en frameworks.";
 
 const studies = [
 	{
@@ -59,13 +61,58 @@ const studies = [
 	},
 ];
 
-const work = [{
-	startdate: new Date("2021-10-01"),
-	enddate:   undefined,
-	name:      "WEB4YOU",
-	role:      "Co-Founder",
-	href:      "https://web-4-you.be/",
-}/*De anderen moeten nog komen*/];
+const work = [
+	{
+		periods:     [
+			{
+				displayText: undefined,
+				startdate:   new Date("2022-05-02"),
+				enddate:     new Date("2022-07-02"),
+			},
+		],
+		companyName: "WEB4YOU",
+		companyLogo: WEB4YOULogo,
+		role:        "Co-Founder",
+		href:        "https://web-4-you.be/",
+		isHoliday:   false,
+	}, {
+		periods:     [
+			{
+				displayText: "Augustus '18",
+				startdate:   new Date("2018-08-01"),
+				enddate:     new Date("2018-08-31"),
+			},
+			{
+				displayText: "Augustus '19",
+				startdate:   new Date("2019-08-01"),
+				enddate:     new Date("2019-08-31"),
+			},
+			{
+				displayText: "Augustus '19",
+				startdate:   new Date("2019-08-01"),
+				enddate:     new Date("2019-08-31"),
+			},
+		],
+		companyName: "Houtshop Van Der Gucht",
+		companyLogo: HoutshopLogo,
+		role:        "Magazijnmedewerker",
+		href:        "https://www.houtshop.be/",
+		isHoliday:   true,
+	}, {
+		periods:     [
+			{
+				displayText: "Woensdagen en zaterdagen '15 - '17",
+				startdate:   new Date("2016-10-01"),
+				enddate:     new Date("2018-06-01"),
+			},
+		],
+		companyName: "V3-Consulting",
+		companyLogo: undefined,
+		role:        "Administratief assistent",
+		href:        undefined,
+		isHoliday:   true,
+	},
+];
 
 const projects = [/*Nog geen toegevoegd*/];
 
