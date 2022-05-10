@@ -1,29 +1,5 @@
 import {Fragment, useCallback, useMemo, useState} from "react";
-import {
-  AppBar,
-  Box,
-  Button,
-  Card,
-  CardHeader,
-  Collapse,
-  Container,
-  createTheme,
-  CssBaseline,
-  Dialog,
-  DialogContent,
-  DialogContentText,
-  DialogTitle,
-  Drawer,
-  IconButton,
-  List,
-  ListItemButton,
-  ListItemIcon,
-  Stack,
-  ThemeProvider,
-  Toolbar,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
+import {AppBar, Box, Button, Card, CardHeader, Collapse, Container, createTheme, CssBaseline, Dialog, DialogContent, DialogContentText, DialogTitle, Drawer, IconButton, List, ListItemButton, ListItemIcon, Stack, ThemeProvider, Toolbar, Typography, useMediaQuery} from "@mui/material";
 import {Close, Menu} from "@mui/icons-material";
 import {firstname, lastname, siteSettings, workInProgress} from "./config";
 import {AboutMe, Skills, Studies, Work} from "./containers";
@@ -31,7 +7,7 @@ import {AboutMe, Skills, Studies, Work} from "./containers";
 
 function App() {
   const lightMode = useMediaQuery("(prefers-color-scheme: light)");
-  const theme     = useMemo(() => createTheme(
+  const theme = useMemo(() => createTheme(
       {
         palette: {
           mode:              lightMode ? "light" : "dark",
@@ -69,18 +45,18 @@ function App() {
   const smartphone = useMediaQuery("only screen and (max-width:630px)");
 
   const [isOpenedNavDrawer, setOpenedNavDrawer] = useState(false);
-  const toggleNavDrawer                         = useCallback(() => {
+  const toggleNavDrawer = useCallback(() => {
     setOpenedNavDrawer(!isOpenedNavDrawer);
   }, [isOpenedNavDrawer, setOpenedNavDrawer]);
 
   const [isOpenedWIPDialog, setOpenedWIPDialog] = useState(false);
-  const toggleWIPDialog                         = useCallback(() => {
+  const toggleWIPDialog = useCallback(() => {
     setOpenedWIPDialog(!isOpenedWIPDialog);
   }, [isOpenedWIPDialog, setOpenedWIPDialog]);
 
   return (<Fragment>
     <ThemeProvider theme={theme}>
-      <CssBaseline />
+      <CssBaseline/>
       <AppBar position={"sticky"} sx={{zIndex: (theme) => theme.zIndex.drawer + 1}}>
         <Container>
           <Toolbar disableGutters>
@@ -97,17 +73,18 @@ function App() {
                   edge={"end"}
                   color={"inherit"}
                   onClick={toggleNavDrawer}>
-                {isOpenedNavDrawer ? <Close /> : <Menu />}
+                {isOpenedNavDrawer ? <Close/> : <Menu/>}
               </IconButton>
             </Collapse>
             <Collapse orientation={"horizontal"} in={!smartphone}>
               <Box component={"div"} sx={{display: "flex"}}>
                 {workInProgress &&
-                 <Button sx={{color: "inherit"}} startIcon={workInProgress?.icon} onClick={toggleWIPDialog}>
-                   <Typography variant={"button"} noWrap>
-                     {workInProgress?.short}
-                   </Typography>
-                 </Button>}
+                    <Button sx={{color: "inherit"}} startIcon={workInProgress?.icon}
+                            onClick={toggleWIPDialog}>
+                      <Typography variant={"button"} noWrap>
+                        {workInProgress?.short}
+                      </Typography>
+                    </Button>}
                 <Button sx={{color: "inherit"}} href={"#studies"}>
                   <Typography variant={"button"} noWrap>
                     Studies
@@ -142,7 +119,7 @@ function App() {
               edge={"end"}
               color={"inherit"}
               onClick={toggleNavDrawer}>
-            {isOpenedNavDrawer ? <Close /> : <Menu />}
+            {isOpenedNavDrawer ? <Close/> : <Menu/>}
           </IconButton>
         </Toolbar>
         <List>
@@ -177,13 +154,13 @@ function App() {
           display: smartphone ? undefined : "flex",
         }}>
           <CardHeader title={workInProgress?.title}
-                      subheader={workInProgress?.text} />
+                      subheader={workInProgress?.text}/>
         </Card>
         <Stack rowGap={siteSettings?.sectionSpacing} direction={"column"}>
-          <AboutMe />
-          <Studies />
-          <Work />
-          <Skills />
+          <AboutMe/>
+          <Studies/>
+          <Work/>
+          <Skills/>
         </Stack>
       </Container>
       <Dialog open={workInProgress && isOpenedWIPDialog} onClose={toggleWIPDialog}>

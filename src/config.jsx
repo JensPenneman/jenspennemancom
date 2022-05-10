@@ -118,19 +118,19 @@ const projects = [/*Nog geen toegevoegd*/];
 
 const socialMedia = [{
 	name: "Facebook",
-	icon: <Facebook />,
+	icon: <Facebook/>,
 	href: "https://facebook.com",
 }, {
 	name: "Instagram",
-	icon: <Instagram />,
+	icon: <Instagram/>,
 	href: "https://facebook.com",
 }, {
 	name: "Twitter",
-	icon: <Twitter />,
+	icon: <Twitter/>,
 	href: "https://facebook.com",
 }, {
 	name: "LinkedIn",
-	icon: <LinkedIn />,
+	icon: <LinkedIn/>,
 	href: "https://facebook.com",
 }];
 
@@ -138,7 +138,7 @@ const workInProgress = {
 	title: "Work in progress",
 	short: "WIP",
 	text:  "Er wordt nog aan de site gewerkt... Kom eens terug binnen een week of 2.",
-	icon:  <Handyman />,
+	icon:  <Handyman/>,
 };
 
 const siteSettings = {
