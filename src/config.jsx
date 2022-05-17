@@ -4,6 +4,7 @@ import HoGentLogo from "./images/HoGentLogo.png";
 import BroederschoolStekeneLogo from "./images/BroederschoolStekeneLogo.png";
 import WEB4YOULogo from "./images/WEB4YOULogo.svg";
 import HoutshopLogo from "./images/HoutshopLogo.png";
+import StoraEnsoLogo from "./images/StoraEnsoLogo.jpg";
 
 import {Facebook, Handyman, Instagram, LinkedIn, Twitter} from "@mui/icons-material";
 
@@ -75,6 +76,19 @@ const work = [
 		role:        "Co-Founder",
 		href:        "https://web-4-you.be/",
 		isHoliday:   false,
+	}, {
+		periods:     [
+			{
+				displayText: "Zomer 2021",
+				startdate:   new Date("2021-08-01"),
+				enddate:     new Date("2021-08-31"),
+			},
+		],
+		companyName: "StoraEnso",
+		companyLogo: StoraEnsoLogo,
+		role:        "Magazijnmedewerker",
+		href:        "",
+		isHoliday:   true,
 	}, {
 		periods:     [
 			{
