@@ -4,7 +4,7 @@ import {siteSettings, work} from "../../config";
 
 const page = memo(() => {
 	return (<Fragment>
-		<Divider id={"werkervaring"}>
+		<Divider>
 			<Typography variant={"h4"} component={"h2"}>
 				Werkervaring
 			</Typography>

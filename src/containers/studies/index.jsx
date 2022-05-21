@@ -5,7 +5,7 @@ import {OpenInNew} from "@mui/icons-material";
 
 const page = memo(() => {
     return (<Fragment>
-        <Divider id={"studies"}>
+        <Divider>
             <Typography variant={"h4"} component={"h2"}>
                 Studies
             </Typography>

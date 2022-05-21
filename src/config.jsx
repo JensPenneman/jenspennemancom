@@ -2,9 +2,14 @@ import JensPenneman from "./images/IMG_1429.jpeg";
 
 import HoGentLogo from "./images/HoGentLogo.png";
 import BroederschoolStekeneLogo from "./images/BroederschoolStekeneLogo.png";
+
 import WEB4YOULogo from "./images/WEB4YOULogo.svg";
 import HoutshopLogo from "./images/HoutshopLogo.png";
 import StoraEnsoLogo from "./images/StoraEnsoLogo.jpg";
+
+import BertsCreationsWebsite from "./images/BertsCreationsWebsitePC.png";
+import BartBostoenWebsite from "./images/BartBostoenWebsite.png";
+import KLJStekeneWebsite from "./images/KLJStekeneWebsite.png";
 
 import {Facebook, Handyman, Instagram, LinkedIn, Twitter} from "@mui/icons-material";
 
@@ -128,7 +133,23 @@ const work = [
 	},
 ];
 
-const projects = [/*Nog geen toegevoegd*/];
+const projects = [
+	{
+		name:  "Bart Bostoen",
+		href:  "https://bartbostoen.be/",
+		image: BartBostoenWebsite,
+	},
+	{
+		name:  "Berts Creations",
+		href:  "https://bertscreations.be",
+		image: BertsCreationsWebsite,
+	},
+	{
+		name:  "KLJ Stekene",
+		href:  "https://kljstekene.be",
+		image: KLJStekeneWebsite,
+	},
+];
 
 const socialMedia = [{
 	name: "Facebook",
