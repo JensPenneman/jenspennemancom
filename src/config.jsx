@@ -89,7 +89,7 @@ const work = [
 				enddate:     new Date("2021-08-31"),
 			},
 		],
-		companyName: "StoraEnso",
+		companyName: "StoraEnso (Lumipaper)",
 		companyLogo: StoraEnsoLogo,
 		role:        "Magazijnmedewerker",
 		href:        "",
