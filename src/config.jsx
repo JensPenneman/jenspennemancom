@@ -154,19 +154,19 @@ const projects = [
 const socialMedia = [{
 	name: "Facebook",
 	icon: <Facebook/>,
-	href: "https://facebook.com",
+	href: "https://www.facebook.com/PennemanJens",
 }, {
 	name: "Instagram",
 	icon: <Instagram/>,
-	href: "https://facebook.com",
+	href: "https://www.instagram.com/jens.penneman/",
 }, {
 	name: "Twitter",
 	icon: <Twitter/>,
-	href: "https://facebook.com",
+	href: "https://twitter.com/JensPenneman",
 }, {
 	name: "LinkedIn",
 	icon: <LinkedIn/>,
-	href: "https://facebook.com",
+	href: "https://www.linkedin.com/in/jenspenneman/",
 }];
 
 const workInProgress = {

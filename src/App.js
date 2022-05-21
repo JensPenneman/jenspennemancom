@@ -1,6 +1,6 @@
 import {Fragment, useMemo} from "react";
-import {AppBar, Button, Card, CardHeader, Container, createTheme, CssBaseline, Stack, ThemeProvider, Toolbar, Typography, useMediaQuery} from "@mui/material";
-import {firstname, lastname, siteSettings, workInProgress} from "./config";
+import {AppBar, Button, Card, CardHeader, Container, createTheme, CssBaseline, IconButton, Stack, ThemeProvider, Toolbar, Typography, useMediaQuery} from "@mui/material";
+import {firstname, lastname, siteSettings, socialMedia, workInProgress} from "./config";
 import {AboutMe, Projects, Studies, Work} from "./containers";
 
 
@@ -77,6 +77,22 @@ function App() {
           <Work/>
           <Projects/>
         </Stack>
+      </Container>
+      <Container>
+        <Toolbar disableGutters>
+          <Typography component={"span"} variant={"caption"} noWrap sx={{flexGrow: 1}}>
+            &copy; Jens Penneman
+          </Typography>
+          {
+            socialMedia
+                .map((social, index, socialMedia) => {
+                  return <IconButton href={social.href} target={"_blank"} key={index}
+                                     edge={index === socialMedia.length - 1 ? "end" : undefined}>
+                    {social.icon}
+                  </IconButton>;
+                })
+          }
+        </Toolbar>
       </Container>
     </ThemeProvider>
   </Fragment>);
