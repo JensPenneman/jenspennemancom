@@ -11,7 +11,7 @@ import BertsCreationsWebsite from "./images/BertsCreationsWebsitePC.png";
 import BartBostoenWebsite from "./images/BartBostoenWebsite.png";
 import KLJStekeneWebsite from "./images/KLJStekeneWebsite.png";
 
-import {Facebook, Handyman, Instagram, LinkedIn, Twitter} from "@mui/icons-material";
+import {Facebook, Instagram, LinkedIn, Twitter} from "@mui/icons-material";
 
 const firstname = "Jens";
 const lastname = "Penneman";
@@ -169,12 +169,13 @@ const socialMedia = [{
 	href: "https://www.linkedin.com/in/jenspenneman/",
 }];
 
-const workInProgress = {
-	title: "Work in progress",
-	short: "WIP",
-	text:  "Er wordt nog aan de site gewerkt... Kom eens terug binnen een week of 2.",
-	icon:  <Handyman/>,
-};
+const workInProgress = undefined;
+/*{
+ title: "Work in progress",
+ short: "WIP",
+ text:  "Er wordt nog aan de site gewerkt... Kom eens terug binnen een week of 2.",
+ icon: <Handyman/>,
+ };*/
 
 const siteSettings = {
 	sectionSpacing: 2,

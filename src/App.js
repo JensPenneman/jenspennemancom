@@ -64,13 +64,15 @@ function App() {
         </Container>
       </AppBar>
       <Container component={"main"} sx={{marginY: 2}}>
-        <Card sx={{
-          marginY: 2,
-          display: smartphone ? undefined : "flex",
-        }}>
-          <CardHeader title={workInProgress?.title}
-                      subheader={workInProgress?.text}/>
-        </Card>
+        {workInProgress &&
+            <Card sx={{
+              marginY: 2,
+              display: smartphone ? undefined : "flex",
+            }}>
+              <CardHeader title={workInProgress?.title}
+                          subheader={workInProgress?.text}/>
+            </Card>
+        }
         <Stack rowGap={siteSettings?.sectionSpacing} direction={"column"}>
           <AboutMe/>
           <Studies/>
