@@ -57,7 +57,7 @@ function App() {
             >
               {firstname} {lastname}
             </Typography>
-            <Button color={"inherit"} disabled={true}>
+            <Button href={"./docs/JensPennemanCV.pdf"} color={"inherit"} download>
               Download CV
             </Button>
           </Toolbar>
